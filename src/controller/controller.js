@@ -39,7 +39,7 @@ let getById = async (req, res) => {
 
 let updateContact = async (req, res) => {
     try {
-        console.log("controller", req.body)
+        // console.log("controller", req.body)
         let url = req.url;
         let startIndex = url.indexOf("/", 7) + 1
         let id = url.slice(startIndex, url.length)
