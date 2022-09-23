@@ -10,6 +10,10 @@ const initWebRoutes = (app) => {
     app.put("/api/contacts/:id", controller.updateContact)
     app.delete("/api/contacts/:id", controller.deleteContactId)
 
+    app.get("/", (req, res) => {
+        res.json("Welcome")
+    })
+
     app.get("*", (req, res) => {
         res.status(404).json("Resource not found")
     })
